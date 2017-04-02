@@ -6,7 +6,7 @@
 		.global main
 		.text
 		
-main:		movia r5, 0
+main:	movia r5, 0
 		movia r6, 1
 		movia r10,10              # coloca o valor maximo
 		movia r11, 2	          # contador			
@@ -19,7 +19,7 @@ main:		movia r5, 0
 		ble r10, r11, LB	  # verifica se a posição maxima é a dois
 		
 		
-loop:		addi r11, r11,1	          # contador incrementa 	
+loop:	addi r11, r11,1	          # contador incrementa 	
 		bgt r11, r10, fim         # se o contador chegar a posição maxima, pula pro fim
 		add r14, r12,r13          # coloca no reg de saida a soma de r12 e 13
 		mov r12, r13	          # r12 passa a ter o valor da proxima posição 		

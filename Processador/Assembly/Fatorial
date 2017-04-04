@@ -1,42 +1,50 @@
-###############################################
-# Fatorial
-###############################################
+############################################### 
+# Fatorial 
+############################################### 
 
-		.data
-		.global main
-		.text
-		
-main:	movia r5, 0
-	movia r6, 1	
-	movia r10, 4	#posição maxima
-	movia r15,0
-		
-	ble r10, r5, LA	
-	ble r10, r6, LB
+ 		.data 
+		.global main 
+ 		.text 
+ 		 
+main:	movia r5, 0 
+ 	movia r6, 1	 
+ 	movia r10,5 #posiÃ§Ã£o maxima 
+ 	movia r15,0 
+ 		 
+ 	ble r10, r5, LA	 
+ 	ble r10, r6, LB 
+ 	 
+ 	mov r11, r10 
+ 	br LC 
+		 
+loop:	add r15, r15,r11 
+ 	subi r12,r12,1 
+ 	ble r12, r5, LD 
+ 	br loop	 
+ 
+ 
+LA:	movia r15, 0 
+ 	br fim 
+	 
+LB:	
+ 	br fim 
+ 	 
+LC: 	subi r10, r10,1 
+ 	ble r10, r6, fim 
+ 	mov r12, r10 
+ 	br loop 
+ 	 
+LD: 	mov r11, r15 
+	bgtu r10,r6, LE
+	br LF
+	 
 	
-	mov r11, r10
-	br LC
-	
-	
-		
-loop:	add r15, r15,r11
-	subi r12,r12,1
-	ble r12, r5, LD
-	br loop	
+LE:   	movia r15, 0
+	br LF
 
-LA:	movia r15, 0
-	br fim
-	
-LB:	movia r15, 1
-	br fim
-	
-LC: 	subi r10, r10,1
-	ble r10, r6, fim
-	mov r12, r10
-	br loop
-	
-LD: 	mov r11, r15
-	br LC
-	
-		
-fim:	nop
+LF: 	br LC
+
+fim:    mov r15, r11
+	nop 
+
+

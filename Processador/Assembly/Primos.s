@@ -1,4 +1,4 @@
-	.data
+.data
 	.global main
 	.equ SERIAL, 0x860
 
@@ -79,8 +79,9 @@ proximo:        subi r11, r11,1
 		bge r20,r11, fim
 		br Rest
 
-addpilha:	mov r23,r11	#essa linha deveria ta add na pilha
-		br proximo	 	
+addpilha:	mov r3,r11	#essa linha deveria ta add na pilha
+		movia r23, 10
+		br enpilharout	 	
 #################################################################################################
 #################################################################################################		
 		
@@ -99,4 +100,32 @@ raiz1:
 
 #################################################################################################
 #################################################################################################	
-fim:		
+
+enpilharout:
+	beq r3, r0, output
+	div r10, r3, r23
+	mul r4, r10, r23
+	sub r10, r3, r4
+	div r3, r3, r23
+	addi sp, sp, -8
+	addi r1, r1, 1
+	stw r10, 0(r27)
+	br enpilharout
+	
+output:	ldw r9, 8(r8)
+	andi r9, r9, 0b01000000
+	beq r9, r0, output
+	ldw r10, 0(r27)
+	subi r1, r1, 1
+	addi sp, sp, 8
+	addi r10, r10, 48
+	stw r10, 4(r8)
+	beq r1, r0, nextline
+	br output
+
+nextline: 
+	movia r4, -38
+	addi r4, r4, 48
+	stw r4, 4(r8)
+	br proximo
+fim:	

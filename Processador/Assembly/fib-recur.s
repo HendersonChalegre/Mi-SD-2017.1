@@ -4,15 +4,16 @@
 
 	.text
 	
-# n é r4
+# n Ã© r4
 # $v0=r2, $a0=r4, ra=r31
 
 main:
 	movia r8, SERIAL
 	movia r6, -38 #Enter
+	movia r11, 10
 	beq r4, r0, input
 	call  fib    # fib(n)
-	call   exit   #pula para o fim do programa
+	call   enpilharout   #pula para o fim do programa
 	
 	
 	
@@ -47,9 +48,33 @@ fib_recurse:
 	addi r4,r4,-2    #n=n-2
 	call fib         #fib(n-2)
 	
-	ldw  r8,8(sp)    #carrega o resultado de fib(n-1) da pilha
-	add r2,r8,r2     #soma o res de fib(n-2)com fib(n-1) e salva em r2
+	ldw  r7,8(sp)    #carrega o resultado de fib(n-1) da pilha
+	add r2,r7,r2     #soma o res de fib(n-2)com fib(n-1) e salva em r2
 	ldw ra,0(sp)     #carrega o endereco de retorno na pilha
 	addi sp,sp,12    #restaura o ponteiro da pilha
 	jmp  ra
+	
+	
+enpilharout:
+	beq r2, r0, output
+	div r10, r2, r11
+	mul r12, r10, r11
+	sub r10, r2, r12
+	div r2, r2, r11
+	addi sp, sp, -8
+	addi r1, r1, 1
+	stw r10, 0(r27)
+	br enpilharout
+	
+output:	ldw r9, 8(r8)
+	andi r9, r9, 0b01000000
+	beq r9, r0, output
+	ldw r10, 0(r27)
+	subi r1, r1, 1
+	addi sp, sp, 8
+	addi r10, r10, 48
+	stw r10, 4(r8)
+	beq r1, r0, exit
+	br output
+
 exit:

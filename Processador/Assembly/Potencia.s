@@ -34,7 +34,10 @@ input2:	ldw r9, 8(r8)
 	muli r11, r11, 10
 	add r11, r11, r12
 	br input2
-	
+
+###############################################################################################
+###############################################################################################	
+
 potenciar:
 	ble r10, r5, LA		# base = 0
 	ble r10, r6, LB		# base = 1
@@ -52,6 +55,8 @@ loop:	add r15, r15,r13	# soma o valor atual de r13 no r15
 	ble r14, r5, LH		# verifica se eh zero, para finalizar a recursaividade
 	br loop			# reinicia a recussividade
 
+###############################################################################################
+###############################################################################################	
 
 LH:     ble r12, r5, enpilharout# verifica se já finalizou o programa
 	mov r14, r10		# coloca o valor da base para fazer o ciclo de multiplicacao
@@ -70,29 +75,35 @@ LB:	movia r15, 1		# o registrador de saida eh colocado como um
 LC:	mov r15, r10		# o registrador de saida eh colocado como o valor da base
 	br enpilharout		# finaliza
 	
+###############################################################################################
+###############################################################################################	
+
 enpilharout:
-	mov r3, r15
+	mov r3, r15 # Salva no r3 para gerar a saida
 
 enpilhar:
-	beq r3, r0, output
-	div r10, r3, r17
+	beq r3, r0, output  # Se resultado igual a zero vai para saida
+	div r10, r3, r17 # divide por 10
 	mul r12, r10, r17
-	sub r10, r3, r12
-	div r3, r3, r17
+	sub r10, r3, r12 #salva o resto da divisao
+	div r3, r3, r17 # salva o a saida -1 digito
 	addi sp, sp, -8
-	addi r1, r1, 1
-	stw r10, 0(r27)
+	addi r1, r1, 1  #quantidade de digitos 
+	stw r10, 0(r27) # adciona na lista digito por digito
 	br enpilhar
 	
 output:	ldw r9, 8(r8)
 	andi r9, r9, 0b01000000
 	beq r9, r0, output
-	ldw r10, 0(r27)
+	ldw r10, 0(r27) # lê da pilha um digito
 	subi r1, r1, 1
 	addi sp, sp, 8
 	addi r10, r10, 48
-	stw r10, 4(r8)
-	beq r1, r0, fim
+	stw r10, 4(r8)  #envia para o UART o digito
+	beq r1, r0, fim # ate digito igual a > que 0 vai para proxima linha
 	br output
-	
+
+###############################################################################################
+###############################################################################################	
+
 fim:	nop			# nao faz nada

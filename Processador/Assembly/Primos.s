@@ -79,7 +79,7 @@ proximo:        subi r11, r11,1
 		bge r20,r11, fim
 		br Rest
 
-addpilha:	mov r3,r11	#essa linha deveria ta add na pilha
+addpilha:	mov r3,r11	#salva numero primo no r3 para enviar na saida UART
 		movia r23, 10
 		br enpilharout	 	
 #################################################################################################
@@ -102,30 +102,30 @@ raiz1:
 #################################################################################################	
 
 enpilharout:
-	beq r3, r0, output
-	div r10, r3, r23
+	beq r3, r0, output # Se resultado igual a zero vai para saida
+	div r10, r3, r23 # divide por 10
 	mul r4, r10, r23
-	sub r10, r3, r4
-	div r3, r3, r23
-	addi sp, sp, -8
-	addi r1, r1, 1
-	stw r10, 0(r27)
+	sub r10, r3, r4 #salva o resto da divisao
+	div r3, r3, r23 # salva o a saida -1 digito
+	addi sp, sp, -8  
+	addi r1, r1, 1 #quantidade de digitos 
+	stw r10, 0(r27) # adciona na lista digito por digito
 	br enpilharout
 	
 output:	ldw r9, 8(r8)
 	andi r9, r9, 0b01000000
 	beq r9, r0, output
-	ldw r10, 0(r27)
+	ldw r10, 0(r27) # lê da pilha um digito
 	subi r1, r1, 1
 	addi sp, sp, 8
 	addi r10, r10, 48
-	stw r10, 4(r8)
-	beq r1, r0, nextline
+	stw r10, 4(r8)  #envia para o UART o digito
+	beq r1, r0, nextline # ate digito igual a > que 0 vai para proxima linha
 	br output
 
 nextline: 
-	movia r4, -38
+	movia r4, -38 # valor de ENTER
 	addi r4, r4, 48
-	stw r4, 4(r8)
-	br proximo
+	stw r4, 4(r8) # envia uma linha
+	br proximo # proximo numero primo
 fim:	

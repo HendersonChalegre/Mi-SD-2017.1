@@ -1,0 +1,18 @@
+Reading /opt/altera/13.0sp2/modelsim_ase/tcl/vsim/pref.tcl 
+
+# 10.1d
+
+proc start {m} {vsim work.$m}
+set MODULE ALUTestbench
+# ALUTestbench
+start $MODULE
+# vsim work.ALUTestbench 
+# Loading work.ALUTestbench
+# Loading work.ALUdec
+# Loading work.ALU
+add wave $MODULE/*
+add wave $MODULE/DUT1/*
+add wave $MODULE/DUT2/*
+run 100us
+# FAIL: Incorrect result for opcode 100000, funct: 010110:
+# 	A: 0x92153524, B: 0xffffde81, DUTout: 0x0000000X, REFout: 0x921513a5

@@ -1,0 +1,69 @@
+proc start {m} {vsim work.$m}
+set MODULE ALUTestVectorTestbench
+# ALUTestVectorTestbench
+start $MODULE
+# vsim work.ALUTestVectorTestbench 
+# Loading work.ALUTestVectorTestbench
+# Loading work.ALUdec
+# Loading work.ALU
+add wave $MODULE/*
+add wave $MODULE/DUT1/*
+add wave $MODULE/DUT2/*
+run 100us
+# PASS: opcode 001111, funct 110101
+# 	A: 0xa378f99a, B: 0x000075e4, DUTout: 0x75e40000, REFout: 0x75e40000
+# PASS: opcode 001101, funct 010101
+# 	A: 0xfd17db4e, B: 0x000064c5, DUTout: 0xfd17ffcf, REFout: 0xfd17ffcf
+# PASS: opcode 000000, funct 000011
+# 	A: 0x00000009, B: 0xc255f393, DUTout: 0xffe12af9, REFout: 0xffe12af9
+# PASS: opcode 000000, funct 100110
+# 	A: 0x2387284d, B: 0x8d627070, DUTout: 0xaee5583d, REFout: 0xaee5583d
+# PASS: opcode 000000, funct 101010
+# 	A: 0x1fd702a8, B: 0x876e15cd, DUTout: 0x00000000, REFout: 0x00000000
+# PASS: opcode 000000, funct 000010
+# 	A: 0x0000000b, B: 0x4597cdd1, DUTout: 0x0008b2f9, REFout: 0x0008b2f9
+# VAI DESGRACA
+# PASS: opcode 000000, funct 000000
+# 	A: 0x0000000c, B: 0x83fa953f, DUTout: 0xa953f000, REFout: 0xa953f000
+# VAI DESGRACA
+# PASS: opcode 000000, funct 000111
+# 	A: 0x0000000a, B: 0xd6e83577, DUTout: 0xfff5ba0d, REFout: 0xfff5ba0d
+# PASS: opcode 000000, funct 100011
+# 	A: 0x7167f775, B: 0x6651e379, DUTout: 0x0b1613fc, REFout: 0x0b1613fc
+# PASS: opcode 000000, funct 100100
+# 	A: 0x8565cc4d, B: 0x2125e6fa, DUTout: 0x0125c448, REFout: 0x0125c448
+# PASS: opcode 000000, funct 100001
+# 	A: 0x1c215ee0, B: 0x71efe8ef, DUTout: 0x8e1147cf, REFout: 0x8e1147cf
+# VAI DESGRACA
+# PASS: opcode 000000, funct 000100
+# 	A: 0x00000018, B: 0x1c93e397, DUTout: 0x97000000, REFout: 0x97000000
+# VAI DESGRACA
+# PASS: opcode 000000, funct 101011
+# 	A: 0x08cb7177, B: 0x365a9030, DUTout: 0x00000001, REFout: 0x00000001
+# PASS: opcode 000000, funct 000110
+# 	A: 0x00000004, B: 0x598e5de0, DUTout: 0x0598e5de, REFout: 0x0598e5de
+# PASS: opcode 000000, funct 100101
+# 	A: 0x57cf0578, B: 0x3cc3766d, DUTout: 0x7fcf777d, REFout: 0x7fcf777d
+# PASS: opcode 000000, funct 100111
+# 	A: 0xc635d433, B: 0xbafacd36, DUTout: 0x010022c8, REFout: 0x010022c8
+# PASS: opcode 001011, funct 101100
+# 	A: 0x50f6cf6c, B: 0x000008a3, DUTout: 0x00000000, REFout: 0x00000000
+# PASS: opcode 001010, funct 100100
+# 	A: 0xb602cd42, B: 0xffffaa88, DUTout: 0x00000001, REFout: 0x00000001
+# PASS: opcode 001100, funct 010001
+# 	A: 0x422c4cd0, B: 0x0000e69f, DUTout: 0x00004490, REFout: 0x00004490
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# PASS: opcode xxxxxx, funct xxxxxx
+# 	A: 0xxxxxxxxx, B: 0xxxxxxxxx, DUTout: 0xxxxxxxxx, REFout: 0xxxxxxxxx
+# 
+# 
+# ALL TESTS PASSED!

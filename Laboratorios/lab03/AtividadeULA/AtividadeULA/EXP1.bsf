@@ -1,0 +1,155 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 128 240)
+	(text "EXP1" (rect 5 0 34 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "DIP8" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP8" (rect 21 27 45 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DIP7" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP7" (rect 21 43 45 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "DIP6" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP6" (rect 21 59 45 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DIP5" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP5" (rect 21 75 45 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "DIP4" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP4" (rect 21 91 45 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "DIP3" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP3" (rect 21 107 45 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "DIP2" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP2" (rect 21 123 45 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "DIP1" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "DIP1" (rect 21 139 45 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 112 32)
+		(output)
+		(text "LED12" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "LED12" (rect 55 27 91 41)(font "Arial" (font_size 8)))
+		(line (pt 112 32)(pt 96 32)(line_width 1))
+	)
+	(port
+		(pt 112 48)
+		(output)
+		(text "LED11" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "LED11" (rect 55 43 91 57)(font "Arial" (font_size 8)))
+		(line (pt 112 48)(pt 96 48)(line_width 1))
+	)
+	(port
+		(pt 112 64)
+		(output)
+		(text "LED10" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "LED10" (rect 55 59 91 73)(font "Arial" (font_size 8)))
+		(line (pt 112 64)(pt 96 64)(line_width 1))
+	)
+	(port
+		(pt 112 80)
+		(output)
+		(text "LED9" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED9" (rect 62 75 91 89)(font "Arial" (font_size 8)))
+		(line (pt 112 80)(pt 96 80)(line_width 1))
+	)
+	(port
+		(pt 112 96)
+		(output)
+		(text "LED8" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED8" (rect 62 91 91 105)(font "Arial" (font_size 8)))
+		(line (pt 112 96)(pt 96 96)(line_width 1))
+	)
+	(port
+		(pt 112 112)
+		(output)
+		(text "LED7" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED7" (rect 62 107 91 121)(font "Arial" (font_size 8)))
+		(line (pt 112 112)(pt 96 112)(line_width 1))
+	)
+	(port
+		(pt 112 128)
+		(output)
+		(text "LED6" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED6" (rect 62 123 91 137)(font "Arial" (font_size 8)))
+		(line (pt 112 128)(pt 96 128)(line_width 1))
+	)
+	(port
+		(pt 112 144)
+		(output)
+		(text "LED5" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED5" (rect 62 139 91 153)(font "Arial" (font_size 8)))
+		(line (pt 112 144)(pt 96 144)(line_width 1))
+	)
+	(port
+		(pt 112 160)
+		(output)
+		(text "LED4" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED4" (rect 62 155 91 169)(font "Arial" (font_size 8)))
+		(line (pt 112 160)(pt 96 160)(line_width 1))
+	)
+	(port
+		(pt 112 176)
+		(output)
+		(text "LED3" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "LED3" (rect 62 171 91 185)(font "Arial" (font_size 8)))
+		(line (pt 112 176)(pt 96 176)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 208)(line_width 1))
+	)
+)

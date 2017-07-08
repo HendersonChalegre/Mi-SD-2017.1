@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.100 ns
+From           : I4
+To             : reg_paral_paral:inst5|inst5
+From Clock     : --
+To Clock       : PB1
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 154.000 ns
+From           : memoria:inst7|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5]
+To             : L4
+From Clock     : relogio
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.900 ns
+From           : RX
+To             : MEF:inst|inst3
+From Clock     : --
+To Clock       : relogio
+Failed Paths   : 0
+
+Type           : Clock Setup: 'relogio'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.73 MHz ( period = 211.200 ns )
+From           : mef_exibir:inst25|contador_6bits:inst|inst5
+To             : memoria:inst7|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2]~reg_ra5
+From Clock     : relogio
+To Clock       : relogio
+Failed Paths   : 0
+
+Type           : Clock Hold: 'relogio'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : memoria:inst7|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5]~reg_in
+To             : memoria:inst7|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[5]
+From Clock     : relogio
+To Clock       : relogio
+Failed Paths   : 597
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 597
+
+--------------------------------------------------------------------------------------
+

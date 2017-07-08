@@ -1,0 +1,246 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 200 368)
+	(text "mef_gravacao" (rect 5 0 87 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "dadosin[7]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[7]" (rect 21 27 80 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "dadosin[6]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[6]" (rect 21 43 80 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "dadosin[5]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[5]" (rect 21 59 80 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "dadosin[4]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[4]" (rect 21 75 80 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "dadosin[3]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[3]" (rect 21 91 80 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "dadosin[2]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[2]" (rect 21 107 80 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "dadosin[1]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[1]" (rect 21 123 80 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "dadosin[0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "dadosin[0]" (rect 21 139 80 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "ativo" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "ativo" (rect 21 155 48 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 171 36 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "novo_dado" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "novo_dado" (rect 21 187 84 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "ZERAR" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "ZERAR" (rect 21 203 62 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "dados[7]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[7]" (rect 114 27 163 41)(font "Arial" (font_size 8)))
+		(line (pt 184 32)(pt 168 32)(line_width 1))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "dados[6]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[6]" (rect 114 43 163 57)(font "Arial" (font_size 8)))
+		(line (pt 184 48)(pt 168 48)(line_width 1))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "dados[5]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[5]" (rect 114 59 163 73)(font "Arial" (font_size 8)))
+		(line (pt 184 64)(pt 168 64)(line_width 1))
+	)
+	(port
+		(pt 184 80)
+		(output)
+		(text "dados[4]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[4]" (rect 114 75 163 89)(font "Arial" (font_size 8)))
+		(line (pt 184 80)(pt 168 80)(line_width 1))
+	)
+	(port
+		(pt 184 96)
+		(output)
+		(text "dados[3]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[3]" (rect 114 91 163 105)(font "Arial" (font_size 8)))
+		(line (pt 184 96)(pt 168 96)(line_width 1))
+	)
+	(port
+		(pt 184 112)
+		(output)
+		(text "dados[2]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[2]" (rect 114 107 163 121)(font "Arial" (font_size 8)))
+		(line (pt 184 112)(pt 168 112)(line_width 1))
+	)
+	(port
+		(pt 184 128)
+		(output)
+		(text "dados[1]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[1]" (rect 114 123 163 137)(font "Arial" (font_size 8)))
+		(line (pt 184 128)(pt 168 128)(line_width 1))
+	)
+	(port
+		(pt 184 144)
+		(output)
+		(text "dados[0]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[0]" (rect 114 139 163 153)(font "Arial" (font_size 8)))
+		(line (pt 184 144)(pt 168 144)(line_width 1))
+	)
+	(port
+		(pt 184 160)
+		(output)
+		(text "mens[2]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "mens[2]" (rect 119 155 163 169)(font "Arial" (font_size 8)))
+		(line (pt 184 160)(pt 168 160)(line_width 1))
+	)
+	(port
+		(pt 184 176)
+		(output)
+		(text "mens[1]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "mens[1]" (rect 119 171 163 185)(font "Arial" (font_size 8)))
+		(line (pt 184 176)(pt 168 176)(line_width 1))
+	)
+	(port
+		(pt 184 192)
+		(output)
+		(text "mens[0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "mens[0]" (rect 119 187 163 201)(font "Arial" (font_size 8)))
+		(line (pt 184 192)(pt 168 192)(line_width 1))
+	)
+	(port
+		(pt 184 208)
+		(output)
+		(text "ENVIAR" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "ENVIAR" (rect 119 203 163 217)(font "Arial" (font_size 8)))
+		(line (pt 184 208)(pt 168 208)(line_width 1))
+	)
+	(port
+		(pt 184 224)
+		(output)
+		(text "GRAVAR" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "GRAVAR" (rect 109 219 163 233)(font "Arial" (font_size 8)))
+		(line (pt 184 224)(pt 168 224)(line_width 1))
+	)
+	(port
+		(pt 184 240)
+		(output)
+		(text "endereco[5]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[5]" (rect 95 235 163 249)(font "Arial" (font_size 8)))
+		(line (pt 184 240)(pt 168 240)(line_width 1))
+	)
+	(port
+		(pt 184 256)
+		(output)
+		(text "endereco[4]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[4]" (rect 95 251 163 265)(font "Arial" (font_size 8)))
+		(line (pt 184 256)(pt 168 256)(line_width 1))
+	)
+	(port
+		(pt 184 272)
+		(output)
+		(text "endereco[3]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[3]" (rect 95 267 163 281)(font "Arial" (font_size 8)))
+		(line (pt 184 272)(pt 168 272)(line_width 1))
+	)
+	(port
+		(pt 184 288)
+		(output)
+		(text "endereco[2]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[2]" (rect 95 283 163 297)(font "Arial" (font_size 8)))
+		(line (pt 184 288)(pt 168 288)(line_width 1))
+	)
+	(port
+		(pt 184 304)
+		(output)
+		(text "endereco[1]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[1]" (rect 95 299 163 313)(font "Arial" (font_size 8)))
+		(line (pt 184 304)(pt 168 304)(line_width 1))
+	)
+	(port
+		(pt 184 320)
+		(output)
+		(text "endereco[0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "endereco[0]" (rect 95 315 163 329)(font "Arial" (font_size 8)))
+		(line (pt 184 320)(pt 168 320)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 336)(line_width 1))
+	)
+)

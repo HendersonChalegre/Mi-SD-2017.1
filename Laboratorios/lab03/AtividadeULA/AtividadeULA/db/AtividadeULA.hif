@@ -1,0 +1,425 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74381
+# storage
+db|AtividadeULA.(1).cnf
+db|AtividadeULA.(1).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74381.bdf
+4fda6ffb774bdcc3a0bd65d48c5f48d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Registrador
+# storage
+db|AtividadeULA.(2).cnf
+db|AtividadeULA.(2).cnf
+# case_insensitive
+# source_file
+Registrador.bdf
+a4ab43a67dd55971254df2cbbec679
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULAquefunciona:inst13|Registrador:inst9
+ULAquefunciona:inst13|Registrador:inst8
+ULAquefunciona:inst13|Registrador:inst10
+}
+# macro_sequence
+
+# end
+# entity
+74181
+# storage
+db|AtividadeULA.(3).cnf
+db|AtividadeULA.(3).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74181.bdf
+5a7a42864d75db2f39a1f2da31e3e53
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULAquefunciona:inst13|74181:inst1
+ULAquefunciona:inst13|74181:inst
+}
+# macro_sequence
+
+# end
+# entity
+74185
+# storage
+db|AtividadeULA.(5).cnf
+db|AtividadeULA.(5).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74185.bdf
+4ce9bced35b34649460f16ed5d7a51b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+EXP1:inst|74185:inst1
+EXP1:inst|74185:inst
+EXP1:inst|74185:inst2
+}
+# macro_sequence
+
+# end
+# entity
+EXP1
+# storage
+db|AtividadeULA.(4).cnf
+db|AtividadeULA.(4).cnf
+# case_insensitive
+# source_file
+EXP1.bdf
+b6f6d37c67c2f7a1ff4088f480e58566
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+EXP1:inst
+}
+# macro_sequence
+
+# end
+# entity
+7447
+# storage
+db|AtividadeULA.(8).cnf
+db|AtividadeULA.(8).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|7447.bdf
+b866247e9e4e23608138281b57c7e83
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2|7447:inst
+}
+# macro_sequence
+
+# end
+# entity
+Multiplexador
+# storage
+db|AtividadeULA.(9).cnf
+db|AtividadeULA.(9).cnf
+# case_insensitive
+# source_file
+Multiplexador.bdf
+397b3a90fb8f2b2f3779889f64ed28e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2|Multiplexador:inst2
+}
+# macro_sequence
+
+# end
+# entity
+74153M
+# storage
+db|AtividadeULA.(10).cnf
+db|AtividadeULA.(10).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74153m.bdf
+825cf2b9b562c28ddd5d34586b3a4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2|Multiplexador:inst2|74153m:inst
+Display:inst2|Multiplexador:inst2|74153m:inst2
+Display:inst2|Multiplexador:inst2|74153m:inst3
+Display:inst2|Multiplexador:inst2|74153m:inst4
+}
+# macro_sequence
+
+# end
+# entity
+Contador
+# storage
+db|AtividadeULA.(11).cnf
+db|AtividadeULA.(11).cnf
+# case_insensitive
+# source_file
+Contador.bdf
+e4b213c04838f19e7f55652db8a46
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2|Contador:inst3
+Contador:inst15
+}
+# macro_sequence
+
+# end
+# entity
+Decodificador
+# storage
+db|AtividadeULA.(12).cnf
+db|AtividadeULA.(12).cnf
+# case_insensitive
+# source_file
+Decodificador.bdf
+ea1d2851f9a12f368a5a66b2ac4e970
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2|Decodificador:inst4
+}
+# macro_sequence
+
+# end
+# entity
+Divisor
+# storage
+db|AtividadeULA.(13).cnf
+db|AtividadeULA.(13).cnf
+# case_insensitive
+# source_file
+Divisor.bdf
+df221d3b13ca071437b248113aeef8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Divisor:inst4
+}
+# macro_sequence
+
+# end
+# entity
+Display
+# storage
+db|AtividadeULA.(6).cnf
+db|AtividadeULA.(6).cnf
+# case_insensitive
+# source_file
+Display.bdf
+a32e3c7e36292cfe6ff3ae289b3136
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Display:inst2
+}
+# macro_sequence
+
+# end
+# entity
+Debouncer
+# storage
+db|AtividadeULA.(14).cnf
+db|AtividadeULA.(14).cnf
+# case_insensitive
+# source_file
+Debouncer.bdf
+dba313865a3c324080f86d2a5c77e67e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Debouncer:inst6
+}
+# macro_sequence
+
+# end
+# entity
+74294
+# storage
+db|AtividadeULA.(15).cnf
+db|AtividadeULA.(15).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74294.bdf
+ba5cce35ebdc2316868cd57017a75163
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Debouncer:inst6|74294:inst6
+}
+# macro_sequence
+
+# end
+# entity
+74175
+# storage
+db|AtividadeULA.(16).cnf
+db|AtividadeULA.(16).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74175.bdf
+33ec197e8a955715d86a7afa0777
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULAquefunciona:inst13|74175:inst11
+}
+# macro_sequence
+
+# end
+# entity
+AtividadeULA
+# storage
+db|AtividadeULA.(7).cnf
+db|AtividadeULA.(7).cnf
+# case_insensitive
+# source_file
+AtividadeULA.bdf
+6d7788b4ef56c2627321736f656d99d1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+74182
+# storage
+db|AtividadeULA.(18).cnf
+db|AtividadeULA.(18).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74182.bdf
+7e848f93ad7899d68043667228e561f6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULAquefunciona:inst13|74182:inst7
+}
+# macro_sequence
+
+# end
+# entity
+ULAquefunciona
+# storage
+db|AtividadeULA.(17).cnf
+db|AtividadeULA.(17).cnf
+# case_insensitive
+# source_file
+ULAquefunciona.bdf
+29bd6660d179bd98cd4570a969bda0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ULAquefunciona:inst13
+}
+# macro_sequence
+
+# end
+# entity
+74139M
+# storage
+db|AtividadeULA.(19).cnf
+db|AtividadeULA.(19).cnf
+# case_insensitive
+# source_file
+|opt|altera|9.0|quartus|libraries|others|maxplus2|74139m.bdf
+598561d44a73c1df1398344ebbd2d3c8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74139m:inst17
+}
+# macro_sequence
+
+# end
+# entity
+PRINCIPAL
+# storage
+db|AtividadeULA.(0).cnf
+db|AtividadeULA.(0).cnf
+# case_insensitive
+# source_file
+PRINCIPAL.bdf
+542eae1215eca3cf02b9c4221b87f8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

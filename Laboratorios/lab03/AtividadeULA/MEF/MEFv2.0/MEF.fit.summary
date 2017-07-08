@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Oct 26 09:48:36 2016
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : MEF
+Top-level Entity Name : PBL3
+Family : ACEX1K
+Device : EP1K100QC208-3
+Timing Models : Final
+Total logic elements : 559 / 4,992 ( 11 % )
+Total pins : 36 / 147 ( 24 % )
+Total memory bits : 512 / 49,152 ( 1 % )
+Total PLLs : 0

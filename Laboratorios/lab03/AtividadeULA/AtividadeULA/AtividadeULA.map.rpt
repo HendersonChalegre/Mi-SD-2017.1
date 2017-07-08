@@ -1,0 +1,295 @@
+Analysis & Synthesis report for AtividadeULA
+Mon Feb 13 16:15:59 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Feb 13 16:15:59 2017    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; AtividadeULA                             ;
+; Top-level Entity Name       ; PRINCIPAL                                ;
+; Family                      ; ACEX1K                                   ;
+; Total logic elements        ; 209                                      ;
+; Total pins                  ; 29                                       ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                   ;
++----------------------------------------------------------------+----------------+---------------+
+; Option                                                         ; Setting        ; Default Value ;
++----------------------------------------------------------------+----------------+---------------+
+; Device                                                         ; EP1K100QC208-3 ;               ;
+; Top-level entity name                                          ; PRINCIPAL      ; AtividadeULA  ;
+; Family name                                                    ; ACEX1K         ; Stratix II    ;
+; Optimization Technique                                         ; Speed          ; Area          ;
+; Use Generated Physical Constraints File                        ; Off            ;               ;
+; Use smart compilation                                          ; Off            ; Off           ;
+; Create Debugging Nodes for IP Cores                            ; Off            ; Off           ;
+; Preserve fewer node names                                      ; On             ; On            ;
+; Disable OpenCore Plus hardware evaluation                      ; Off            ; Off           ;
+; Verilog Version                                                ; Verilog_2001   ; Verilog_2001  ;
+; VHDL Version                                                   ; VHDL93         ; VHDL93        ;
+; State Machine Processing                                       ; Auto           ; Auto          ;
+; Safe State Machine                                             ; Off            ; Off           ;
+; Extract Verilog State Machines                                 ; On             ; On            ;
+; Extract VHDL State Machines                                    ; On             ; On            ;
+; Ignore Verilog initial constructs                              ; Off            ; Off           ;
+; Iteration limit for constant Verilog loops                     ; 5000           ; 5000          ;
+; Iteration limit for non-constant Verilog loops                 ; 250            ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On             ; On            ;
+; Parallel Synthesis                                             ; Off            ; Off           ;
+; NOT Gate Push-Back                                             ; On             ; On            ;
+; Power-Up Don't Care                                            ; On             ; On            ;
+; Remove Redundant Logic Cells                                   ; Off            ; Off           ;
+; Remove Duplicate Registers                                     ; On             ; On            ;
+; Ignore CARRY Buffers                                           ; Off            ; Off           ;
+; Ignore CASCADE Buffers                                         ; Off            ; Off           ;
+; Ignore GLOBAL Buffers                                          ; Off            ; Off           ;
+; Ignore ROW GLOBAL Buffers                                      ; Off            ; Off           ;
+; Ignore LCELL Buffers                                           ; Off            ; Off           ;
+; Ignore SOFT Buffers                                            ; On             ; On            ;
+; Limit AHDL Integers to 32 Bits                                 ; Off            ; Off           ;
+; Auto Implement in ROM                                          ; Off            ; Off           ;
+; Carry Chain Length                                             ; 32             ; 32            ;
+; Cascade Chain Length                                           ; 2              ; 2             ;
+; Auto Carry Chains                                              ; On             ; On            ;
+; Auto Open-Drain Pins                                           ; On             ; On            ;
+; Auto ROM Replacement                                           ; On             ; On            ;
+; Auto RAM Replacement                                           ; On             ; On            ;
+; Auto Clock Enable Replacement                                  ; On             ; On            ;
+; Strict RAM Replacement                                         ; Off            ; Off           ;
+; Auto Resource Sharing                                          ; Off            ; Off           ;
+; Allow Any RAM Size For Recognition                             ; Off            ; Off           ;
+; Allow Any ROM Size For Recognition                             ; Off            ; Off           ;
+; Use LogicLock Constraints during Resource Balancing            ; On             ; On            ;
+; Ignore translate_off and synthesis_off directives              ; Off            ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report             ; On             ; On            ;
+; HDL message level                                              ; Level2         ; Level2        ;
+; Suppress Register Optimization Related Messages                ; Off            ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100            ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100            ; 100           ;
+; Block Design Naming                                            ; Auto           ; Auto          ;
+; Synthesis Effort                                               ; Auto           ; Auto          ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On             ; On            ;
+; Analysis & Synthesis Message Level                             ; Medium         ; Medium        ;
++----------------------------------------------------------------+----------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+
+; ULAquefunciona.bdf               ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/ULAquefunciona.bdf ;
+; Registrador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Registrador.bdf    ;
+; EXP1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/EXP1.bdf           ;
+; PRINCIPAL.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/PRINCIPAL.bdf      ;
+; Contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Contador.bdf       ;
+; Decodificador.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Decodificador.bdf  ;
+; Multiplexador.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Multiplexador.bdf  ;
+; Display.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Display.bdf        ;
+; Divisor.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Divisor.bdf        ;
+; Debouncer.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA/Debouncer.bdf      ;
+; 7447.bdf                         ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/7447.bdf                 ;
+; 74153m.bdf                       ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74153m.bdf               ;
+; 74185.bdf                        ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74185.bdf                ;
+; 74182.bdf                        ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74182.bdf                ;
+; 74181.bdf                        ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74181.bdf                ;
+; 74175.bdf                        ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74175.bdf                ;
+; 74139m.bdf                       ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74139m.bdf               ;
+; 74294.bdf                        ; yes             ; Megafunction                       ; /opt/altera/9.0/quartus/libraries/others/maxplus2/74294.bdf                ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++--------------------------------+------------------------------------------------+
+; Resource                       ; Usage                                          ;
++--------------------------------+------------------------------------------------+
+; Total logic elements           ; 209                                            ;
+; Total combinational functions  ; 186                                            ;
+;     -- Total 4-input functions ; 105                                            ;
+;     -- Total 3-input functions ; 25                                             ;
+;     -- Total 2-input functions ; 22                                             ;
+;     -- Total 1-input functions ; 34                                             ;
+;     -- Total 0-input functions ; 0                                              ;
+; Total registers                ; 65                                             ;
+; I/O pins                       ; 29                                             ;
+; Maximum fan-out node           ; ULAquefunciona:inst13|Registrador:inst10|inst6 ;
+; Maximum fan-out                ; 21                                             ;
+; Total fan-out                  ; 724                                            ;
+; Average fan-out                ; 3.04                                           ;
++--------------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                       ; Library Name ;
++-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+--------------+
+; |PRINCIPAL                  ; 209 (0)     ; 65           ; 0           ; 29   ; 144 (0)      ; 23 (0)            ; 42 (0)           ; 0 (0)           ; 0 (0)      ; |PRINCIPAL                                                ; work         ;
+;    |74139m:inst17|          ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|74139m:inst17                                  ; work         ;
+;    |Contador:inst15|        ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Contador:inst15                                ; work         ;
+;    |Debouncer:inst6|        ; 35 (6)      ; 19           ; 0           ; 0    ; 16 (2)       ; 3 (3)             ; 16 (1)           ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Debouncer:inst6                                ; work         ;
+;       |74294:inst6|         ; 29 (29)     ; 15           ; 0           ; 0    ; 14 (14)      ; 0 (0)             ; 15 (15)          ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Debouncer:inst6|74294:inst6                    ; work         ;
+;    |Display:inst2|          ; 34 (0)      ; 2            ; 0           ; 0    ; 32 (0)       ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2                                  ; work         ;
+;       |7447:inst|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|7447:inst                        ; work         ;
+;       |Contador:inst3|      ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Contador:inst3                   ; work         ;
+;       |Decodificador:inst4| ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Decodificador:inst4              ; work         ;
+;       |Multiplexador:inst2| ; 23 (0)      ; 0            ; 0           ; 0    ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Multiplexador:inst2              ; work         ;
+;          |74153m:inst2|     ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Multiplexador:inst2|74153m:inst2 ; work         ;
+;          |74153m:inst3|     ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Multiplexador:inst2|74153m:inst3 ; work         ;
+;          |74153m:inst4|     ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Multiplexador:inst2|74153m:inst4 ; work         ;
+;          |74153m:inst|      ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Display:inst2|Multiplexador:inst2|74153m:inst  ; work         ;
+;    |Divisor:inst4|          ; 14 (14)     ; 14           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 14 (14)          ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|Divisor:inst4                                  ; work         ;
+;    |EXP1:inst|              ; 44 (0)      ; 0            ; 0           ; 0    ; 44 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|EXP1:inst                                      ; work         ;
+;       |74185:inst1|         ; 13 (13)     ; 0            ; 0           ; 0    ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|EXP1:inst|74185:inst1                          ; work         ;
+;       |74185:inst2|         ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|EXP1:inst|74185:inst2                          ; work         ;
+;       |74185:inst|          ; 29 (29)     ; 0            ; 0           ; 0    ; 29 (29)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|EXP1:inst|74185:inst                           ; work         ;
+;    |ULAquefunciona:inst13|  ; 76 (3)      ; 28           ; 0           ; 0    ; 48 (3)       ; 20 (0)            ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13                          ; work         ;
+;       |74175:inst11|        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|74175:inst11             ; work         ;
+;       |74181:inst1|         ; 21 (21)     ; 0            ; 0           ; 0    ; 21 (21)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|74181:inst1              ; work         ;
+;       |74181:inst|          ; 19 (19)     ; 0            ; 0           ; 0    ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|74181:inst               ; work         ;
+;       |74182:inst7|         ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|74182:inst7              ; work         ;
+;       |Registrador:inst10|  ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|Registrador:inst10       ; work         ;
+;       |Registrador:inst8|   ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|Registrador:inst8        ; work         ;
+;       |Registrador:inst9|   ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PRINCIPAL|ULAquefunciona:inst13|Registrador:inst9        ; work         ;
++-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++---------------------------------------+-----------------------------------+
+; Register name                         ; Reason for Removal                ;
++---------------------------------------+-----------------------------------+
+; Divisor:inst4|inst                    ; Merged with Debouncer:inst6|inst3 ;
+; Total Number of Removed Registers = 1 ;                                   ;
++---------------------------------------+-----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Mon Feb 13 16:15:54 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AtividadeULA -c AtividadeULA
+Info: Found 1 design units, including 1 entities, in source file ULAquefunciona.bdf
+    Info: Found entity 1: ULAquefunciona
+Info: Found 1 design units, including 1 entities, in source file Registrador.bdf
+    Info: Found entity 1: Registrador
+Info: Found 1 design units, including 1 entities, in source file AtividadeULA.bdf
+    Info: Found entity 1: AtividadeULA
+Info: Found 1 design units, including 1 entities, in source file EXP1.bdf
+    Info: Found entity 1: EXP1
+Info: Found 1 design units, including 1 entities, in source file PRINCIPAL.bdf
+    Info: Found entity 1: PRINCIPAL
+Info: Found 1 design units, including 1 entities, in source file Contador.bdf
+    Info: Found entity 1: Contador
+Info: Found 1 design units, including 1 entities, in source file Decodificador.bdf
+    Info: Found entity 1: Decodificador
+Info: Found 1 design units, including 1 entities, in source file Multiplexador.bdf
+    Info: Found entity 1: Multiplexador
+Info: Found 1 design units, including 1 entities, in source file Display.bdf
+    Info: Found entity 1: Display
+Info: Found 1 design units, including 1 entities, in source file Divisor.bdf
+    Info: Found entity 1: Divisor
+Info: Found 1 design units, including 1 entities, in source file Debouncer.bdf
+    Info: Found entity 1: Debouncer
+Info: Elaborating entity "PRINCIPAL" for the top level hierarchy
+Info: Elaborating entity "Display" for hierarchy "Display:inst2"
+Info: Elaborating entity "7447" for hierarchy "Display:inst2|7447:inst"
+Info: Elaborated megafunction instantiation "Display:inst2|7447:inst"
+Info: Elaborating entity "Multiplexador" for hierarchy "Display:inst2|Multiplexador:inst2"
+Info: Elaborating entity "74153M" for hierarchy "Display:inst2|Multiplexador:inst2|74153M:inst"
+Info: Elaborated megafunction instantiation "Display:inst2|Multiplexador:inst2|74153M:inst"
+Info: Elaborating entity "Contador" for hierarchy "Display:inst2|Contador:inst3"
+Info: Elaborating entity "Decodificador" for hierarchy "Display:inst2|Decodificador:inst4"
+Info: Elaborating entity "EXP1" for hierarchy "EXP1:inst"
+Info: Elaborating entity "74185" for hierarchy "EXP1:inst|74185:inst1"
+Info: Elaborated megafunction instantiation "EXP1:inst|74185:inst1"
+Info: Elaborating entity "ULAquefunciona" for hierarchy "ULAquefunciona:inst13"
+Info: Elaborating entity "74182" for hierarchy "ULAquefunciona:inst13|74182:inst7"
+Info: Elaborated megafunction instantiation "ULAquefunciona:inst13|74182:inst7"
+Info: Elaborating entity "74181" for hierarchy "ULAquefunciona:inst13|74181:inst1"
+Info: Elaborated megafunction instantiation "ULAquefunciona:inst13|74181:inst1"
+Info: Elaborating entity "Registrador" for hierarchy "ULAquefunciona:inst13|Registrador:inst9"
+Info: Elaborating entity "74175" for hierarchy "ULAquefunciona:inst13|74175:inst11"
+Info: Elaborated megafunction instantiation "ULAquefunciona:inst13|74175:inst11"
+Info: Elaborating entity "74139M" for hierarchy "74139M:inst17"
+Info: Elaborated megafunction instantiation "74139M:inst17"
+Info: Elaborating entity "Debouncer" for hierarchy "Debouncer:inst6"
+Info: Elaborating entity "74294" for hierarchy "Debouncer:inst6|74294:inst6"
+Info: Elaborated megafunction instantiation "Debouncer:inst6|74294:inst6"
+Info: Elaborating entity "Divisor" for hierarchy "Divisor:inst4"
+Info: Ignored 30 buffer(s)
+    Info: Ignored 30 SOFT buffer(s)
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "P" is stuck at VCC
+Info: Implemented 238 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 209 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 181 megabytes
+    Info: Processing ended: Mon Feb 13 16:15:59 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

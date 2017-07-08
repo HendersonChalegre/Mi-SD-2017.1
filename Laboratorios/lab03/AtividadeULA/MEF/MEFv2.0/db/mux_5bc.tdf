@@ -1,0 +1,69 @@
+--lpm_mux CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="ACEX1K" IGNORE_CASCADE_BUFFERS="OFF" LPM_SIZE=10 LPM_WIDTH=1 LPM_WIDTHS=4 data result sel
+--VERSION_BEGIN 9.0 cbx_lpm_mux 2008:05:19:10:30:36:SJ cbx_mgl 2009:01:29:16:12:07:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cascade (in)
+RETURNS ( out);
+
+--synthesis_resources = lut 10 
+SUBDESIGN mux_5bc
+( 
+	data[9..0]	:	input;
+	result[0..0]	:	output;
+	sel[3..0]	:	input;
+) 
+VARIABLE 
+	csc1 : cascade;
+	csc2 : cascade;
+	csc3 : cascade;
+	muxlut_data0w[9..0]	: WIRE;
+	muxlut_result0w	: WIRE;
+	muxlut_select0w[3..0]	: WIRE;
+	result_node[0..0]	: WIRE;
+	sel_ffs_wire[3..0]	: WIRE;
+	sel_node[3..0]	: WIRE;
+	w105w[1..0]	: WIRE;
+	w44w[3..0]	: WIRE;
+	w46w[1..0]	: WIRE;
+	w69w[3..0]	: WIRE;
+	w71w[1..0]	: WIRE;
+	w92w[1..0]	: WIRE;
+	w94w[0..0]	: WIRE;
+	w_mux_outputs42w[2..0]	: WIRE;
+
+BEGIN 
+	csc1.in = ((w46w[1..1] # (w46w[0..0] & w44w[1..1])) # ((! w46w[0..0]) & w44w[0..0]));
+	csc2.in = ((w71w[1..1] # (w71w[0..0] & w69w[1..1])) # ((! w71w[0..0]) & w69w[0..0]));
+	csc3.in = ((w105w[1..1] # (w105w[0..0] & w_mux_outputs42w[1..1])) # ((! w105w[0..0]) & w_mux_outputs42w[0..0]));
+	muxlut_data0w[] = ( data[9..0]);
+	muxlut_result0w = (((! w105w[1..1]) # ((! w105w[0..0]) & w_mux_outputs42w[2..2])) & csc3.out);
+	muxlut_select0w[] = sel_node[];
+	result[] = result_node[];
+	result_node[] = ( muxlut_result0w);
+	sel_ffs_wire[] = ( sel[3..0]);
+	sel_node[] = ( sel_ffs_wire[3..2], sel[1..0]);
+	w105w[1..0] = muxlut_select0w[3..2];
+	w44w[3..0] = muxlut_data0w[3..0];
+	w46w[1..0] = muxlut_select0w[1..0];
+	w69w[3..0] = muxlut_data0w[7..4];
+	w71w[1..0] = muxlut_select0w[1..0];
+	w92w[1..0] = muxlut_data0w[9..8];
+	w94w[0..0] = muxlut_select0w[0..0];
+	w_mux_outputs42w[] = ( ((w92w[0..0] & (! w94w[0..0])) # (w92w[1..1] & w94w[0..0])), ((((! w71w[1..1]) # (w71w[0..0] & w69w[3..3])) # ((! w71w[0..0]) & w69w[2..2])) & csc2.out), ((((! w46w[1..1]) # (w46w[0..0] & w44w[3..3])) # ((! w46w[0..0]) & w44w[2..2])) & csc1.out));
+END;
+--VALID FILE

@@ -1,0 +1,645 @@
+Classic Timing Analyzer report for AtividadeULA
+Mon Feb 13 16:16:49 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-----------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                               ; To                                            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-----------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.100 ns                         ; B0                                 ; Debouncer:inst6|inst                          ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 79.400 ns                        ; Display:inst2|Contador:inst3|inst2 ; OF                                            ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 5.100 ns                         ; DIP1                               ; ULAquefunciona:inst13|Registrador:inst8|inst7 ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 59.88 MHz ( period = 16.700 ns ) ; Debouncer:inst6|74294:inst6|8      ; Debouncer:inst6|74294:inst6|104               ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                    ;                                               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-----------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1K100QC208-3     ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------+------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                          ; To                                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------+------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 59.88 MHz ( period = 16.700 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 14.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 14.700 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 14.400 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 14.500 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 14.300 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 14.100 ns               ;
+; N/A                                     ; 68.97 MHz ( period = 14.500 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|inst8                          ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 69.44 MHz ( period = 14.400 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 13.400 ns               ;
+; N/A                                     ; 69.93 MHz ( period = 14.300 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 12.500 ns               ;
+; N/A                                     ; 70.42 MHz ( period = 14.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 70.42 MHz ( period = 14.200 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 70.92 MHz ( period = 14.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 13.100 ns               ;
+; N/A                                     ; 70.92 MHz ( period = 14.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 13.100 ns               ;
+; N/A                                     ; 70.92 MHz ( period = 14.100 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 12.300 ns               ;
+; N/A                                     ; 71.94 MHz ( period = 13.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 12.800 ns               ;
+; N/A                                     ; 72.99 MHz ( period = 13.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 72.99 MHz ( period = 13.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 72.99 MHz ( period = 13.700 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 11.900 ns               ;
+; N/A                                     ; 74.07 MHz ( period = 13.500 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 74.07 MHz ( period = 13.500 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 74.63 MHz ( period = 13.400 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 74.63 MHz ( period = 13.400 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 74.63 MHz ( period = 13.400 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 75.76 MHz ( period = 13.200 ns )                    ; Debouncer:inst6|74294:inst6|104               ; Debouncer:inst6|inst8                          ; clk        ; clk      ; None                        ; None                      ; 2.400 ns                ;
+; N/A                                     ; 75.76 MHz ( period = 13.200 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 11.400 ns               ;
+; N/A                                     ; 75.76 MHz ( period = 13.200 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 11.400 ns               ;
+; N/A                                     ; 75.76 MHz ( period = 13.200 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 11.400 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 78.13 MHz ( period = 12.800 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 11.900 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 79.37 MHz ( period = 12.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 79.37 MHz ( period = 12.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst6 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 79.37 MHz ( period = 12.600 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 80.00 MHz ( period = 12.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 11.400 ns               ;
+; N/A                                     ; 81.97 MHz ( period = 12.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst6 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 11.000 ns               ;
+; N/A                                     ; 82.64 MHz ( period = 12.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 11.200 ns               ;
+; N/A                                     ; 82.64 MHz ( period = 12.100 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 10.300 ns               ;
+; N/A                                     ; 84.75 MHz ( period = 11.800 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.800 ns               ;
+; N/A                                     ; 85.47 MHz ( period = 11.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 85.47 MHz ( period = 11.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.700 ns               ;
+; N/A                                     ; 86.21 MHz ( period = 11.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 86.21 MHz ( period = 11.600 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.600 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.500 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.500 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.500 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.500 ns               ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 10.400 ns               ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.400 ns               ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.400 ns               ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.200 ns               ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 9.500 ns                ;
+; N/A                                     ; 88.50 MHz ( period = 11.300 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 9.500 ns                ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.100 ns               ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 10.200 ns               ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 9.400 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.100 ns               ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 10.000 ns               ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 9.300 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 9.300 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 9.300 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 10.000 ns               ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 9.900 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 90.91 MHz ( period = 11.000 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 91.74 MHz ( period = 10.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 9.900 ns                ;
+; N/A                                     ; 91.74 MHz ( period = 10.900 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 9.100 ns                ;
+; N/A                                     ; 92.59 MHz ( period = 10.800 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 9.000 ns                ;
+; N/A                                     ; 92.59 MHz ( period = 10.800 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 9.000 ns                ;
+; N/A                                     ; 92.59 MHz ( period = 10.800 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 9.000 ns                ;
+; N/A                                     ; 92.59 MHz ( period = 10.800 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 9.000 ns                ;
+; N/A                                     ; 94.34 MHz ( period = 10.600 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 9.600 ns                ;
+; N/A                                     ; 94.34 MHz ( period = 10.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 9.700 ns                ;
+; N/A                                     ; 95.24 MHz ( period = 10.500 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 9.500 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 8.400 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 8.400 ns                ;
+; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 8.300 ns                ;
+; N/A                                     ; 100.00 MHz ( period = 10.000 ns )                   ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 9.000 ns                ;
+; N/A                                     ; 101.01 MHz ( period = 9.900 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 8.100 ns                ;
+; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 8.700 ns                ;
+; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 8.800 ns                ;
+; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 8.700 ns                ;
+; N/A                                     ; 104.17 MHz ( period = 9.600 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 8.600 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 8.400 ns                ;
+; N/A                                     ; 107.53 MHz ( period = 9.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 8.200 ns                ;
+; N/A                                     ; 107.53 MHz ( period = 9.300 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 8.300 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 8.000 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 8.100 ns                ;
+; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 8.100 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 8.000 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 7.900 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 7.800 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 7.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 7.700 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 7.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Debouncer:inst6|74294:inst6|66                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Debouncer:inst6|74294:inst6|66                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 7.300 ns                ;
+; N/A                                     ; 120.48 MHz ( period = 8.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 7.300 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst6 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 6.900 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 7.000 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 6.900 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 125.00 MHz ( period = 8.000 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 126.58 MHz ( period = 7.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; clk        ; clk      ; None                        ; None                      ; 6.900 ns                ;
+; N/A                                     ; 126.58 MHz ( period = 7.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A                                     ; 126.58 MHz ( period = 7.900 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A                                     ; 128.21 MHz ( period = 7.800 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 128.21 MHz ( period = 7.800 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 128.21 MHz ( period = 7.800 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 128.21 MHz ( period = 7.800 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|70                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|36                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 131.58 MHz ( period = 7.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst6 ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; clk        ; clk      ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 131.58 MHz ( period = 7.600 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 133.33 MHz ( period = 7.500 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 133.33 MHz ( period = 7.500 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 133.33 MHz ( period = 7.500 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|36                 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 133.33 MHz ( period = 7.500 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 133.33 MHz ( period = 7.500 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 136.99 MHz ( period = 7.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 138.89 MHz ( period = 7.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; clk        ; clk      ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 138.89 MHz ( period = 7.200 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 138.89 MHz ( period = 7.200 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 138.89 MHz ( period = 7.200 ns )                    ; ULAquefunciona:inst13|74175:inst11|14         ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 140.85 MHz ( period = 7.100 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 142.86 MHz ( period = 7.000 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 142.86 MHz ( period = 7.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 142.86 MHz ( period = 7.000 ns )                    ; ULAquefunciona:inst13|74175:inst11|13         ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 144.93 MHz ( period = 6.900 ns )                    ; ULAquefunciona:inst13|74175:inst11|15         ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 147.06 MHz ( period = 6.800 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; 147.06 MHz ( period = 6.800 ns )                    ; ULAquefunciona:inst13|74175:inst11|16         ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; 149.25 MHz ( period = 6.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 151.52 MHz ( period = 6.600 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 4.800 ns                ;
+; N/A                                     ; 156.25 MHz ( period = 6.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; 156.25 MHz ( period = 6.400 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; 156.25 MHz ( period = 6.400 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 156.25 MHz ( period = 6.400 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|36                 ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 158.73 MHz ( period = 6.300 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst5 ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; clk        ; clk      ; None                        ; None                      ; 5.300 ns                ;
+; N/A                                     ; 161.29 MHz ( period = 6.200 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; clk        ; clk      ; None                        ; None                      ; 5.200 ns                ;
+; N/A                                     ; 163.93 MHz ( period = 6.100 ns )                    ; Debouncer:inst6|74294:inst6|66                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 4.300 ns                ;
+; N/A                                     ; 166.67 MHz ( period = 6.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; 166.67 MHz ( period = 6.000 ns )                    ; ULAquefunciona:inst13|Registrador:inst8|inst  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; 175.44 MHz ( period = 5.700 ns )                    ; ULAquefunciona:inst13|Registrador:inst9|inst7 ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; clk        ; clk      ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 175.44 MHz ( period = 5.700 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|32                 ; clk        ; clk      ; None                        ; None                      ; 3.900 ns                ;
+; N/A                                     ; 178.57 MHz ( period = 5.600 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; 178.57 MHz ( period = 5.600 ns )                    ; Debouncer:inst6|74294:inst6|56                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 3.800 ns                ;
+; N/A                                     ; 181.82 MHz ( period = 5.500 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 181.82 MHz ( period = 5.500 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 181.82 MHz ( period = 5.500 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|32                 ; clk        ; clk      ; None                        ; None                      ; 3.700 ns                ;
+; N/A                                     ; 185.19 MHz ( period = 5.400 ns )                    ; Debouncer:inst6|74294:inst6|93                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 3.600 ns                ;
+; N/A                                     ; 185.19 MHz ( period = 5.400 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 3.600 ns                ;
+; N/A                                     ; 185.19 MHz ( period = 5.400 ns )                    ; Debouncer:inst6|74294:inst6|8                 ; Debouncer:inst6|74294:inst6|32                 ; clk        ; clk      ; None                        ; None                      ; 3.600 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; Debouncer:inst6|74294:inst6|76                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|56                 ; clk        ; clk      ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|66                 ; clk        ; clk      ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; Debouncer:inst6|74294:inst6|50                ; Debouncer:inst6|74294:inst6|70                 ; clk        ; clk      ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|36                 ; clk        ; clk      ; None                        ; None                      ; 3.500 ns                ;
+; N/A                                     ; 192.31 MHz ( period = 5.200 ns )                    ; Debouncer:inst6|74294:inst6|66                ; Debouncer:inst6|74294:inst6|75                 ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; 192.31 MHz ( period = 5.200 ns )                    ; Debouncer:inst6|74294:inst6|66                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; 192.31 MHz ( period = 5.200 ns )                    ; Debouncer:inst6|74294:inst6|32                ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; 192.31 MHz ( period = 5.200 ns )                    ; Debouncer:inst6|74294:inst6|9                 ; Debouncer:inst6|74294:inst6|32                 ; clk        ; clk      ; None                        ; None                      ; 3.400 ns                ;
+; N/A                                     ; 196.08 MHz ( period = 5.100 ns )                    ; Debouncer:inst6|74294:inst6|75                ; Debouncer:inst6|74294:inst6|104                ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; 196.08 MHz ( period = 5.100 ns )                    ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|36                 ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; 196.08 MHz ( period = 5.100 ns )                    ; Debouncer:inst6|74294:inst6|24                ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 3.300 ns                ;
+; N/A                                     ; Restricted to 200.00 MHz ( period = 5.000 ns )      ; Debouncer:inst6|74294:inst6|75                ; Debouncer:inst6|74294:inst6|76                 ; clk        ; clk      ; None                        ; None                      ; 2.700 ns                ;
+; N/A                                     ; Restricted to 200.00 MHz ( period = 5.000 ns )      ; Debouncer:inst6|74294:inst6|76                ; Debouncer:inst6|74294:inst6|93                 ; clk        ; clk      ; None                        ; None                      ; 2.700 ns                ;
+; N/A                                     ; Restricted to 200.00 MHz ( period = 5.000 ns )      ; Debouncer:inst6|74294:inst6|36                ; Debouncer:inst6|74294:inst6|45                 ; clk        ; clk      ; None                        ; None                      ; 2.700 ns                ;
+; N/A                                     ; Restricted to 200.00 MHz ( period = 5.000 ns )      ; Debouncer:inst6|74294:inst6|45                ; Debouncer:inst6|74294:inst6|50                 ; clk        ; clk      ; None                        ; None                      ; 2.700 ns                ;
+; N/A                                     ; Restricted to 200.00 MHz ( period = 5.000 ns )      ; Debouncer:inst6|74294:inst6|16                ; Debouncer:inst6|74294:inst6|24                 ; clk        ; clk      ; None                        ; None                      ; 2.700 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                               ;                                                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------+------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; tsu                                                                                                 ;
++-------+--------------+------------+------+-----------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                                            ; To Clock ;
++-------+--------------+------------+------+-----------------------------------------------+----------+
+; N/A   ; None         ; 7.100 ns   ; B0   ; Debouncer:inst6|inst                          ; clk      ;
+; N/A   ; None         ; 0.600 ns   ; DIP4 ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; clk      ;
+; N/A   ; None         ; 0.500 ns   ; DIP4 ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; clk      ;
+; N/A   ; None         ; -0.400 ns  ; DIP8 ; ULAquefunciona:inst13|74175:inst11|13         ; clk      ;
+; N/A   ; None         ; -0.400 ns  ; DIP8 ; ULAquefunciona:inst13|Registrador:inst9|inst  ; clk      ;
+; N/A   ; None         ; -0.500 ns  ; DIP8 ; ULAquefunciona:inst13|Registrador:inst8|inst  ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; DIP5 ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; clk      ;
+; N/A   ; None         ; -1.100 ns  ; DIP5 ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; clk      ;
+; N/A   ; None         ; -1.200 ns  ; DIP5 ; ULAquefunciona:inst13|74175:inst11|16         ; clk      ;
+; N/A   ; None         ; -2.000 ns  ; DIP6 ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; clk      ;
+; N/A   ; None         ; -2.000 ns  ; DIP6 ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; clk      ;
+; N/A   ; None         ; -2.000 ns  ; DIP6 ; ULAquefunciona:inst13|74175:inst11|15         ; clk      ;
+; N/A   ; None         ; -2.000 ns  ; DIP7 ; ULAquefunciona:inst13|74175:inst11|14         ; clk      ;
+; N/A   ; None         ; -2.000 ns  ; DIP7 ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; clk      ;
+; N/A   ; None         ; -2.100 ns  ; DIP7 ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; clk      ;
+; N/A   ; None         ; -3.100 ns  ; DIP2 ; ULAquefunciona:inst13|Registrador:inst9|inst6 ; clk      ;
+; N/A   ; None         ; -3.200 ns  ; DIP2 ; ULAquefunciona:inst13|Registrador:inst8|inst6 ; clk      ;
+; N/A   ; None         ; -3.200 ns  ; DIP1 ; ULAquefunciona:inst13|Registrador:inst9|inst7 ; clk      ;
+; N/A   ; None         ; -3.300 ns  ; DIP3 ; ULAquefunciona:inst13|Registrador:inst9|inst5 ; clk      ;
+; N/A   ; None         ; -3.300 ns  ; DIP3 ; ULAquefunciona:inst13|Registrador:inst8|inst5 ; clk      ;
+; N/A   ; None         ; -3.300 ns  ; DIP1 ; ULAquefunciona:inst13|Registrador:inst8|inst7 ; clk      ;
++-------+--------------+------------+------+-----------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; tco                                                                                                     ;
++-------+--------------+------------+------------------------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                                           ; To    ; From Clock ;
++-------+--------------+------------+------------------------------------------------+-------+------------+
+; N/A   ; None         ; 79.400 ns  ; Display:inst2|Contador:inst3|inst2             ; OG    ; clk        ;
+; N/A   ; None         ; 79.400 ns  ; Display:inst2|Contador:inst3|inst2             ; OF    ; clk        ;
+; N/A   ; None         ; 79.300 ns  ; Display:inst2|Contador:inst3|inst              ; OD    ; clk        ;
+; N/A   ; None         ; 79.300 ns  ; Display:inst2|Contador:inst3|inst              ; OC    ; clk        ;
+; N/A   ; None         ; 79.200 ns  ; Display:inst2|Contador:inst3|inst              ; OG    ; clk        ;
+; N/A   ; None         ; 79.200 ns  ; Display:inst2|Contador:inst3|inst              ; OF    ; clk        ;
+; N/A   ; None         ; 79.200 ns  ; Display:inst2|Contador:inst3|inst2             ; OC    ; clk        ;
+; N/A   ; None         ; 79.200 ns  ; Display:inst2|Contador:inst3|inst2             ; OA    ; clk        ;
+; N/A   ; None         ; 79.100 ns  ; Display:inst2|Contador:inst3|inst2             ; OD    ; clk        ;
+; N/A   ; None         ; 79.100 ns  ; Display:inst2|Contador:inst3|inst              ; OA    ; clk        ;
+; N/A   ; None         ; 79.000 ns  ; Display:inst2|Contador:inst3|inst              ; OB    ; clk        ;
+; N/A   ; None         ; 78.800 ns  ; Display:inst2|Contador:inst3|inst2             ; OB    ; clk        ;
+; N/A   ; None         ; 77.600 ns  ; Display:inst2|Contador:inst3|inst              ; OE    ; clk        ;
+; N/A   ; None         ; 77.400 ns  ; Display:inst2|Contador:inst3|inst2             ; OE    ; clk        ;
+; N/A   ; None         ; 67.300 ns  ; Display:inst2|Contador:inst3|inst              ; S0    ; clk        ;
+; N/A   ; None         ; 67.200 ns  ; Display:inst2|Contador:inst3|inst2             ; S1    ; clk        ;
+; N/A   ; None         ; 67.100 ns  ; Display:inst2|Contador:inst3|inst2             ; S0    ; clk        ;
+; N/A   ; None         ; 67.000 ns  ; Display:inst2|Contador:inst3|inst              ; S1    ; clk        ;
+; N/A   ; None         ; 65.600 ns  ; Display:inst2|Contador:inst3|inst              ; S2    ; clk        ;
+; N/A   ; None         ; 65.400 ns  ; Display:inst2|Contador:inst3|inst2             ; S2    ; clk        ;
+; N/A   ; None         ; 64.200 ns  ; Display:inst2|Contador:inst3|inst              ; S3    ; clk        ;
+; N/A   ; None         ; 64.000 ns  ; Display:inst2|Contador:inst3|inst2             ; S3    ; clk        ;
+; N/A   ; None         ; 55.800 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OC    ; clk        ;
+; N/A   ; None         ; 55.700 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OC    ; clk        ;
+; N/A   ; None         ; 55.500 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OA    ; clk        ;
+; N/A   ; None         ; 55.400 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OA    ; clk        ;
+; N/A   ; None         ; 55.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OG    ; clk        ;
+; N/A   ; None         ; 55.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OG    ; clk        ;
+; N/A   ; None         ; 55.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OF    ; clk        ;
+; N/A   ; None         ; 55.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OD    ; clk        ;
+; N/A   ; None         ; 55.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OC    ; clk        ;
+; N/A   ; None         ; 55.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OF    ; clk        ;
+; N/A   ; None         ; 55.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OD    ; clk        ;
+; N/A   ; None         ; 55.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OB    ; clk        ;
+; N/A   ; None         ; 55.000 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OB    ; clk        ;
+; N/A   ; None         ; 54.900 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OA    ; clk        ;
+; N/A   ; None         ; 54.800 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OC    ; clk        ;
+; N/A   ; None         ; 54.700 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OG    ; clk        ;
+; N/A   ; None         ; 54.600 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OF    ; clk        ;
+; N/A   ; None         ; 54.600 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OD    ; clk        ;
+; N/A   ; None         ; 54.600 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OC    ; clk        ;
+; N/A   ; None         ; 54.500 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OB    ; clk        ;
+; N/A   ; None         ; 54.500 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OA    ; clk        ;
+; N/A   ; None         ; 54.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OG    ; clk        ;
+; N/A   ; None         ; 54.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OA    ; clk        ;
+; N/A   ; None         ; 54.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OF    ; clk        ;
+; N/A   ; None         ; 54.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OD    ; clk        ;
+; N/A   ; None         ; 54.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OD    ; clk        ;
+; N/A   ; None         ; 54.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OG    ; clk        ;
+; N/A   ; None         ; 54.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OF    ; clk        ;
+; N/A   ; None         ; 54.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OB    ; clk        ;
+; N/A   ; None         ; 53.900 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OB    ; clk        ;
+; N/A   ; None         ; 53.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst5 ; OE    ; clk        ;
+; N/A   ; None         ; 53.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst6 ; OE    ; clk        ;
+; N/A   ; None         ; 52.700 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst7 ; OE    ; clk        ;
+; N/A   ; None         ; 52.500 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst3 ; OE    ; clk        ;
+; N/A   ; None         ; 52.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst4 ; OE    ; clk        ;
+; N/A   ; None         ; 45.600 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OC    ; clk        ;
+; N/A   ; None         ; 45.400 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OD    ; clk        ;
+; N/A   ; None         ; 45.400 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OC    ; clk        ;
+; N/A   ; None         ; 45.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OG    ; clk        ;
+; N/A   ; None         ; 45.300 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OA    ; clk        ;
+; N/A   ; None         ; 45.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OF    ; clk        ;
+; N/A   ; None         ; 45.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OB    ; clk        ;
+; N/A   ; None         ; 45.100 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OA    ; clk        ;
+; N/A   ; None         ; 45.000 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OG    ; clk        ;
+; N/A   ; None         ; 45.000 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OF    ; clk        ;
+; N/A   ; None         ; 44.900 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OD    ; clk        ;
+; N/A   ; None         ; 44.700 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OB    ; clk        ;
+; N/A   ; None         ; 43.700 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst2 ; OE    ; clk        ;
+; N/A   ; None         ; 43.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst1 ; OE    ; clk        ;
+; N/A   ; None         ; 42.500 ns  ; ULAquefunciona:inst13|74175:inst11|14          ; AEQB  ; clk        ;
+; N/A   ; None         ; 42.500 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst3  ; AEQB  ; clk        ;
+; N/A   ; None         ; 42.400 ns  ; ULAquefunciona:inst13|74175:inst11|13          ; AEQB  ; clk        ;
+; N/A   ; None         ; 42.300 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst1  ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.500 ns  ; ULAquefunciona:inst13|74175:inst11|15          ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.500 ns  ; ULAquefunciona:inst13|74175:inst11|14          ; carry ; clk        ;
+; N/A   ; None         ; 41.500 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst3  ; carry ; clk        ;
+; N/A   ; None         ; 41.400 ns  ; ULAquefunciona:inst13|74175:inst11|13          ; carry ; clk        ;
+; N/A   ; None         ; 41.300 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst2  ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.300 ns  ; ULAquefunciona:inst13|74175:inst11|16          ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.300 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst1  ; carry ; clk        ;
+; N/A   ; None         ; 41.200 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst3  ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.200 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst   ; AEQB  ; clk        ;
+; N/A   ; None         ; 41.000 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst1  ; AEQB  ; clk        ;
+; N/A   ; None         ; 40.800 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst2  ; AEQB  ; clk        ;
+; N/A   ; None         ; 40.800 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst   ; AEQB  ; clk        ;
+; N/A   ; None         ; 40.500 ns  ; ULAquefunciona:inst13|74175:inst11|15          ; carry ; clk        ;
+; N/A   ; None         ; 40.300 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst2  ; carry ; clk        ;
+; N/A   ; None         ; 40.300 ns  ; ULAquefunciona:inst13|74175:inst11|16          ; carry ; clk        ;
+; N/A   ; None         ; 40.200 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst3  ; carry ; clk        ;
+; N/A   ; None         ; 40.200 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst   ; carry ; clk        ;
+; N/A   ; None         ; 40.000 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst1  ; carry ; clk        ;
+; N/A   ; None         ; 39.800 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst2  ; carry ; clk        ;
+; N/A   ; None         ; 39.800 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst   ; carry ; clk        ;
+; N/A   ; None         ; 39.700 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst6  ; AEQB  ; clk        ;
+; N/A   ; None         ; 39.500 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OC    ; clk        ;
+; N/A   ; None         ; 39.300 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst6  ; AEQB  ; clk        ;
+; N/A   ; None         ; 39.200 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst4  ; AEQB  ; clk        ;
+; N/A   ; None         ; 39.200 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OA    ; clk        ;
+; N/A   ; None         ; 39.000 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OG    ; clk        ;
+; N/A   ; None         ; 38.900 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OF    ; clk        ;
+; N/A   ; None         ; 38.900 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OD    ; clk        ;
+; N/A   ; None         ; 38.800 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst4  ; AEQB  ; clk        ;
+; N/A   ; None         ; 38.800 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OB    ; clk        ;
+; N/A   ; None         ; 38.600 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst5  ; carry ; clk        ;
+; N/A   ; None         ; 38.500 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst5  ; AEQB  ; clk        ;
+; N/A   ; None         ; 38.100 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst5  ; carry ; clk        ;
+; N/A   ; None         ; 38.000 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst5  ; AEQB  ; clk        ;
+; N/A   ; None         ; 37.700 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst4  ; carry ; clk        ;
+; N/A   ; None         ; 37.300 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst4  ; carry ; clk        ;
+; N/A   ; None         ; 37.000 ns  ; ULAquefunciona:inst13|Registrador:inst10|inst  ; OE    ; clk        ;
+; N/A   ; None         ; 36.600 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst6  ; carry ; clk        ;
+; N/A   ; None         ; 36.500 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst6  ; carry ; clk        ;
+; N/A   ; None         ; 35.400 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst7  ; AEQB  ; clk        ;
+; N/A   ; None         ; 34.100 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst7  ; AEQB  ; clk        ;
+; N/A   ; None         ; 32.800 ns  ; ULAquefunciona:inst13|Registrador:inst9|inst7  ; carry ; clk        ;
+; N/A   ; None         ; 29.400 ns  ; ULAquefunciona:inst13|Registrador:inst8|inst7  ; carry ; clk        ;
+; N/A   ; None         ; 22.200 ns  ; Contador:inst15|inst                           ; LED3  ; clk        ;
+; N/A   ; None         ; 22.200 ns  ; Contador:inst15|inst                           ; LED2  ; clk        ;
+; N/A   ; None         ; 22.000 ns  ; Contador:inst15|inst2                          ; LED3  ; clk        ;
+; N/A   ; None         ; 22.000 ns  ; Contador:inst15|inst2                          ; LED2  ; clk        ;
+; N/A   ; None         ; 21.800 ns  ; Contador:inst15|inst                           ; LED0  ; clk        ;
+; N/A   ; None         ; 21.600 ns  ; Contador:inst15|inst2                          ; LED0  ; clk        ;
+; N/A   ; None         ; 20.500 ns  ; Contador:inst15|inst2                          ; LED1  ; clk        ;
+; N/A   ; None         ; 20.300 ns  ; Contador:inst15|inst                           ; LED1  ; clk        ;
++-------+--------------+------------+------------------------------------------------+-------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; th                                                                                                        ;
++---------------+-------------+-----------+------+-----------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                                            ; To Clock ;
++---------------+-------------+-----------+------+-----------------------------------------------+----------+
+; N/A           ; None        ; 5.100 ns  ; DIP3 ; ULAquefunciona:inst13|Registrador:inst9|inst5 ; clk      ;
+; N/A           ; None        ; 5.100 ns  ; DIP3 ; ULAquefunciona:inst13|Registrador:inst8|inst5 ; clk      ;
+; N/A           ; None        ; 5.100 ns  ; DIP1 ; ULAquefunciona:inst13|Registrador:inst8|inst7 ; clk      ;
+; N/A           ; None        ; 5.000 ns  ; DIP2 ; ULAquefunciona:inst13|Registrador:inst8|inst6 ; clk      ;
+; N/A           ; None        ; 5.000 ns  ; DIP1 ; ULAquefunciona:inst13|Registrador:inst9|inst7 ; clk      ;
+; N/A           ; None        ; 4.900 ns  ; DIP2 ; ULAquefunciona:inst13|Registrador:inst9|inst6 ; clk      ;
+; N/A           ; None        ; 3.900 ns  ; DIP7 ; ULAquefunciona:inst13|Registrador:inst8|inst1 ; clk      ;
+; N/A           ; None        ; 3.800 ns  ; DIP6 ; ULAquefunciona:inst13|Registrador:inst9|inst2 ; clk      ;
+; N/A           ; None        ; 3.800 ns  ; DIP6 ; ULAquefunciona:inst13|Registrador:inst8|inst2 ; clk      ;
+; N/A           ; None        ; 3.800 ns  ; DIP6 ; ULAquefunciona:inst13|74175:inst11|15         ; clk      ;
+; N/A           ; None        ; 3.800 ns  ; DIP7 ; ULAquefunciona:inst13|74175:inst11|14         ; clk      ;
+; N/A           ; None        ; 3.800 ns  ; DIP7 ; ULAquefunciona:inst13|Registrador:inst9|inst1 ; clk      ;
+; N/A           ; None        ; 3.000 ns  ; DIP5 ; ULAquefunciona:inst13|74175:inst11|16         ; clk      ;
+; N/A           ; None        ; 2.900 ns  ; DIP5 ; ULAquefunciona:inst13|Registrador:inst8|inst3 ; clk      ;
+; N/A           ; None        ; 2.800 ns  ; DIP5 ; ULAquefunciona:inst13|Registrador:inst9|inst3 ; clk      ;
+; N/A           ; None        ; 2.300 ns  ; DIP8 ; ULAquefunciona:inst13|Registrador:inst8|inst  ; clk      ;
+; N/A           ; None        ; 2.200 ns  ; DIP8 ; ULAquefunciona:inst13|74175:inst11|13         ; clk      ;
+; N/A           ; None        ; 2.200 ns  ; DIP8 ; ULAquefunciona:inst13|Registrador:inst9|inst  ; clk      ;
+; N/A           ; None        ; 1.300 ns  ; DIP4 ; ULAquefunciona:inst13|Registrador:inst8|inst4 ; clk      ;
+; N/A           ; None        ; 1.200 ns  ; DIP4 ; ULAquefunciona:inst13|Registrador:inst9|inst4 ; clk      ;
+; N/A           ; None        ; -5.500 ns ; B0   ; Debouncer:inst6|inst                          ; clk      ;
++---------------+-------------+-----------+------+-----------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Mon Feb 13 16:16:47 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off AtividadeULA -c AtividadeULA
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 25 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Divisor:inst4|inst1" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst2" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst3" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst5" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst6" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst7" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst8" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst9" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst10" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst11" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst12" as buffer
+    Info: Detected ripple clock "Debouncer:inst6|inst3" as buffer
+    Info: Detected ripple clock "Debouncer:inst6|74294:inst6|56" as buffer
+    Info: Detected gated clock "Debouncer:inst6|74294:inst6|154~0" as buffer
+    Info: Detected ripple clock "Debouncer:inst6|74294:inst6|104" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst13" as buffer
+    Info: Detected gated clock "74139m:inst17|33~0" as buffer
+    Info: Detected gated clock "74139m:inst17|33~1" as buffer
+    Info: Detected ripple clock "Debouncer:inst6|inst8" as buffer
+    Info: Detected gated clock "74139m:inst17|33~2" as buffer
+    Info: Detected ripple clock "Contador:inst15|inst2" as buffer
+    Info: Detected ripple clock "Contador:inst15|inst" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst14" as buffer
+    Info: Detected ripple clock "Divisor:inst4|inst15" as buffer
+    Info: Detected gated clock "74139m:inst17|33~3" as buffer
+Info: Clock "clk" has Internal fmax of 59.88 MHz between source register "Debouncer:inst6|74294:inst6|8" and destination register "Debouncer:inst6|74294:inst6|104" (period= 16.7 ns)
+    Info: + Longest register to register delay is 14.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_H36; Fanout = 5; REG Node = 'Debouncer:inst6|74294:inst6|8'
+        Info: 2: + IC(0.200 ns) + CELL(1.900 ns) = 2.100 ns; Loc. = LC8_H36; Fanout = 2; COMB Node = 'Debouncer:inst6|74294:inst6|13'
+        Info: 3: + IC(0.200 ns) + CELL(2.200 ns) = 4.500 ns; Loc. = LC1_H36; Fanout = 2; COMB Node = 'Debouncer:inst6|74294:inst6|136'
+        Info: 4: + IC(1.100 ns) + CELL(2.200 ns) = 7.800 ns; Loc. = LC1_H37; Fanout = 2; COMB Node = 'Debouncer:inst6|74294:inst6|142'
+        Info: 5: + IC(1.100 ns) + CELL(2.200 ns) = 11.100 ns; Loc. = LC6_H38; Fanout = 2; COMB Node = 'Debouncer:inst6|74294:inst6|148'
+        Info: 6: + IC(0.200 ns) + CELL(2.200 ns) = 13.500 ns; Loc. = LC1_H38; Fanout = 1; COMB Node = 'Debouncer:inst6|74294:inst6|153'
+        Info: 7: + IC(1.100 ns) + CELL(0.300 ns) = 14.900 ns; Loc. = LC5_H39; Fanout = 3; REG Node = 'Debouncer:inst6|74294:inst6|104'
+        Info: Total cell delay = 11.000 ns ( 73.83 % )
+        Info: Total interconnect delay = 3.900 ns ( 26.17 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 10.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H17; Fanout = 3; REG Node = 'Debouncer:inst6|inst3'
+            Info: 3: + IC(2.100 ns) + CELL(1.700 ns) = 6.800 ns; Loc. = LC1_H39; Fanout = 15; COMB Node = 'Debouncer:inst6|74294:inst6|154~0'
+            Info: 4: + IC(4.100 ns) + CELL(0.000 ns) = 10.900 ns; Loc. = LC5_H39; Fanout = 3; REG Node = 'Debouncer:inst6|74294:inst6|104'
+            Info: Total cell delay = 3.300 ns ( 30.28 % )
+            Info: Total interconnect delay = 7.600 ns ( 69.72 % )
+        Info: - Longest clock path from clock "clk" to source register is 10.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H17; Fanout = 3; REG Node = 'Debouncer:inst6|inst3'
+            Info: 3: + IC(2.100 ns) + CELL(1.700 ns) = 6.800 ns; Loc. = LC1_H39; Fanout = 15; COMB Node = 'Debouncer:inst6|74294:inst6|154~0'
+            Info: 4: + IC(4.100 ns) + CELL(0.000 ns) = 10.900 ns; Loc. = LC7_H36; Fanout = 5; REG Node = 'Debouncer:inst6|74294:inst6|8'
+            Info: Total cell delay = 3.300 ns ( 30.28 % )
+            Info: Total interconnect delay = 7.600 ns ( 69.72 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Micro setup delay of destination is 0.700 ns
+Info: tsu for register "Debouncer:inst6|inst" (data pin = "B0", clock pin = "clk") is 7.100 ns
+    Info: + Longest pin to register delay is 8.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_87; Fanout = 1; PIN Node = 'B0'
+        Info: 2: + IC(4.200 ns) + CELL(1.000 ns) = 8.300 ns; Loc. = LC7_H39; Fanout = 2; REG Node = 'Debouncer:inst6|inst'
+        Info: Total cell delay = 4.100 ns ( 49.40 % )
+        Info: Total interconnect delay = 4.200 ns ( 50.60 % )
+    Info: + Micro setup delay of destination is 0.700 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 1.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC7_H39; Fanout = 2; REG Node = 'Debouncer:inst6|inst'
+        Info: Total cell delay = 0.500 ns ( 26.32 % )
+        Info: Total interconnect delay = 1.400 ns ( 73.68 % )
+Info: tco from clock "clk" to destination pin "OG" through register "Display:inst2|Contador:inst3|inst2" is 79.400 ns
+    Info: + Longest clock path from clock "clk" to source register is 51.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H17; Fanout = 3; REG Node = 'Debouncer:inst6|inst3'
+        Info: 3: + IC(1.200 ns) + CELL(1.100 ns) = 5.300 ns; Loc. = LC1_H6; Fanout = 2; REG Node = 'Divisor:inst4|inst1'
+        Info: 4: + IC(2.200 ns) + CELL(1.100 ns) = 8.600 ns; Loc. = LC2_H17; Fanout = 2; REG Node = 'Divisor:inst4|inst2'
+        Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.500 ns; Loc. = LC2_H14; Fanout = 2; REG Node = 'Divisor:inst4|inst3'
+        Info: 6: + IC(2.300 ns) + CELL(1.100 ns) = 14.900 ns; Loc. = LC1_H43; Fanout = 2; REG Node = 'Divisor:inst4|inst5'
+        Info: 7: + IC(3.600 ns) + CELL(1.100 ns) = 19.600 ns; Loc. = LC1_J44; Fanout = 2; REG Node = 'Divisor:inst4|inst6'
+        Info: 8: + IC(1.800 ns) + CELL(1.100 ns) = 22.500 ns; Loc. = LC1_J37; Fanout = 2; REG Node = 'Divisor:inst4|inst7'
+        Info: 9: + IC(1.800 ns) + CELL(1.100 ns) = 25.400 ns; Loc. = LC2_J43; Fanout = 2; REG Node = 'Divisor:inst4|inst8'
+        Info: 10: + IC(3.600 ns) + CELL(1.100 ns) = 30.100 ns; Loc. = LC1_L49; Fanout = 2; REG Node = 'Divisor:inst4|inst9'
+        Info: 11: + IC(1.900 ns) + CELL(1.100 ns) = 33.100 ns; Loc. = LC1_L36; Fanout = 2; REG Node = 'Divisor:inst4|inst10'
+        Info: 12: + IC(1.900 ns) + CELL(1.100 ns) = 36.100 ns; Loc. = LC1_L48; Fanout = 2; REG Node = 'Divisor:inst4|inst11'
+        Info: 13: + IC(2.000 ns) + CELL(1.100 ns) = 39.200 ns; Loc. = LC1_L30; Fanout = 2; REG Node = 'Divisor:inst4|inst12'
+        Info: 14: + IC(1.300 ns) + CELL(1.100 ns) = 41.600 ns; Loc. = LC1_L44; Fanout = 2; REG Node = 'Divisor:inst4|inst13'
+        Info: 15: + IC(1.700 ns) + CELL(1.100 ns) = 44.400 ns; Loc. = LC1_L45; Fanout = 2; REG Node = 'Divisor:inst4|inst14'
+        Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 47.200 ns; Loc. = LC1_L42; Fanout = 3; REG Node = 'Divisor:inst4|inst15'
+        Info: 17: + IC(3.900 ns) + CELL(0.000 ns) = 51.100 ns; Loc. = LC4_I32; Fanout = 10; REG Node = 'Display:inst2|Contador:inst3|inst2'
+        Info: Total cell delay = 17.000 ns ( 33.27 % )
+        Info: Total interconnect delay = 34.100 ns ( 66.73 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Longest register to pin delay is 27.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC4_I32; Fanout = 10; REG Node = 'Display:inst2|Contador:inst3|inst2'
+        Info: 2: + IC(2.000 ns) + CELL(1.900 ns) = 3.900 ns; Loc. = LC5_I43; Fanout = 4; COMB Node = 'Display:inst2|Multiplexador:inst2|74153m:inst2|2~0'
+        Info: 3: + IC(1.800 ns) + CELL(1.900 ns) = 7.600 ns; Loc. = LC5_I36; Fanout = 1; COMB Node = 'Display:inst2|Multiplexador:inst2|74153m:inst3|9~0'
+        Info: 4: + IC(0.200 ns) + CELL(1.700 ns) = 9.500 ns; Loc. = LC7_I36; Fanout = 1; COMB Node = 'Display:inst2|Multiplexador:inst2|74153m:inst3|9~1'
+        Info: 5: + IC(0.200 ns) + CELL(1.900 ns) = 11.600 ns; Loc. = LC1_I36; Fanout = 7; COMB Node = 'Display:inst2|Multiplexador:inst2|74153m:inst3|9~2'
+        Info: 6: + IC(3.800 ns) + CELL(2.000 ns) = 17.400 ns; Loc. = LC1_J51; Fanout = 1; COMB Node = 'Display:inst2|7447:inst|87'
+        Info: 7: + IC(1.300 ns) + CELL(8.500 ns) = 27.200 ns; Loc. = PIN_54; Fanout = 0; PIN Node = 'OG'
+        Info: Total cell delay = 17.900 ns ( 65.81 % )
+        Info: Total interconnect delay = 9.300 ns ( 34.19 % )
+Info: th for register "ULAquefunciona:inst13|Registrador:inst9|inst5" (data pin = "DIP3", clock pin = "clk") is 5.100 ns
+    Info: + Longest clock path from clock "clk" to destination register is 12.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC4_H39; Fanout = 2; REG Node = 'Debouncer:inst6|inst8'
+        Info: 3: + IC(4.600 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC3_B9; Fanout = 5; REG Node = 'Contador:inst15|inst2'
+        Info: 4: + IC(0.200 ns) + CELL(1.900 ns) = 10.800 ns; Loc. = LC1_B9; Fanout = 9; COMB Node = '74139m:inst17|33~1'
+        Info: 5: + IC(1.900 ns) + CELL(0.000 ns) = 12.700 ns; Loc. = LC6_B2; Fanout = 2; REG Node = 'ULAquefunciona:inst13|Registrador:inst9|inst5'
+        Info: Total cell delay = 4.600 ns ( 36.22 % )
+        Info: Total interconnect delay = 8.100 ns ( 63.78 % )
+    Info: + Micro hold delay of destination is 0.900 ns
+    Info: - Shortest pin to register delay is 8.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_103; Fanout = 2; PIN Node = 'DIP3'
+        Info: 2: + IC(4.400 ns) + CELL(1.000 ns) = 8.500 ns; Loc. = LC6_B2; Fanout = 2; REG Node = 'ULAquefunciona:inst13|Registrador:inst9|inst5'
+        Info: Total cell delay = 4.100 ns ( 48.24 % )
+        Info: Total interconnect delay = 4.400 ns ( 51.76 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Mon Feb 13 16:16:49 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

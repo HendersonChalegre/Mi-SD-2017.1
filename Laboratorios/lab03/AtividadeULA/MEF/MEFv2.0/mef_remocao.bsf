@@ -1,0 +1,267 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 368)
+	(text "mef_remocao" (rect 5 0 82 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "enderecoin[5]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[5]" (rect 21 27 98 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "enderecoin[4]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[4]" (rect 21 43 98 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "enderecoin[3]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[3]" (rect 21 59 98 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "enderecoin[2]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[2]" (rect 21 75 98 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "enderecoin[1]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[1]" (rect 21 91 98 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "enderecoin[0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "enderecoin[0]" (rect 21 107 98 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "enderecoin_teste[5]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[5]" (rect 21 123 134 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "enderecoin_teste[4]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[4]" (rect 21 139 134 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "enderecoin_teste[3]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[3]" (rect 21 155 134 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "enderecoin_teste[2]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[2]" (rect 21 171 134 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "enderecoin_teste[1]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[1]" (rect 21 187 134 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "enderecoin_teste[0]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "enderecoin_teste[0]" (rect 21 203 134 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "ativa" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "ativa" (rect 21 219 48 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "clock" (rect 21 235 50 249)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "novo" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "novo" (rect 21 251 49 265)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(line_width 1))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "dados[7]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[7]" (rect 186 27 235 41)(font "Arial" (font_size 8)))
+		(line (pt 256 32)(pt 240 32)(line_width 1))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "dados[6]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[6]" (rect 186 43 235 57)(font "Arial" (font_size 8)))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "dados[5]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[5]" (rect 186 59 235 73)(font "Arial" (font_size 8)))
+		(line (pt 256 64)(pt 240 64)(line_width 1))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "dados[4]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[4]" (rect 186 75 235 89)(font "Arial" (font_size 8)))
+		(line (pt 256 80)(pt 240 80)(line_width 1))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "dados[3]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[3]" (rect 186 91 235 105)(font "Arial" (font_size 8)))
+		(line (pt 256 96)(pt 240 96)(line_width 1))
+	)
+	(port
+		(pt 256 112)
+		(output)
+		(text "dados[2]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[2]" (rect 186 107 235 121)(font "Arial" (font_size 8)))
+		(line (pt 256 112)(pt 240 112)(line_width 1))
+	)
+	(port
+		(pt 256 128)
+		(output)
+		(text "dados[1]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[1]" (rect 186 123 235 137)(font "Arial" (font_size 8)))
+		(line (pt 256 128)(pt 240 128)(line_width 1))
+	)
+	(port
+		(pt 256 144)
+		(output)
+		(text "dados[0]" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "dados[0]" (rect 186 139 235 153)(font "Arial" (font_size 8)))
+		(line (pt 256 144)(pt 240 144)(line_width 1))
+	)
+	(port
+		(pt 256 160)
+		(output)
+		(text "enderecoout[5]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[5]" (rect 149 155 235 169)(font "Arial" (font_size 8)))
+		(line (pt 256 160)(pt 240 160)(line_width 1))
+	)
+	(port
+		(pt 256 176)
+		(output)
+		(text "enderecoout[4]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[4]" (rect 149 171 235 185)(font "Arial" (font_size 8)))
+		(line (pt 256 176)(pt 240 176)(line_width 1))
+	)
+	(port
+		(pt 256 192)
+		(output)
+		(text "enderecoout[3]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[3]" (rect 149 187 235 201)(font "Arial" (font_size 8)))
+		(line (pt 256 192)(pt 240 192)(line_width 1))
+	)
+	(port
+		(pt 256 208)
+		(output)
+		(text "enderecoout[2]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[2]" (rect 149 203 235 217)(font "Arial" (font_size 8)))
+		(line (pt 256 208)(pt 240 208)(line_width 1))
+	)
+	(port
+		(pt 256 224)
+		(output)
+		(text "enderecoout[1]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[1]" (rect 149 219 235 233)(font "Arial" (font_size 8)))
+		(line (pt 256 224)(pt 240 224)(line_width 1))
+	)
+	(port
+		(pt 256 240)
+		(output)
+		(text "enderecoout[0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "enderecoout[0]" (rect 149 235 235 249)(font "Arial" (font_size 8)))
+		(line (pt 256 240)(pt 240 240)(line_width 1))
+	)
+	(port
+		(pt 256 256)
+		(output)
+		(text "APAGAR" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "APAGAR" (rect 182 251 235 265)(font "Arial" (font_size 8)))
+		(line (pt 256 256)(pt 240 256)(line_width 1))
+	)
+	(port
+		(pt 256 272)
+		(output)
+		(text "mens_r[2]" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "mens_r[2]" (rect 179 267 235 281)(font "Arial" (font_size 8)))
+		(line (pt 256 272)(pt 240 272)(line_width 1))
+	)
+	(port
+		(pt 256 288)
+		(output)
+		(text "mens_r[1]" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "mens_r[1]" (rect 179 283 235 297)(font "Arial" (font_size 8)))
+		(line (pt 256 288)(pt 240 288)(line_width 1))
+	)
+	(port
+		(pt 256 304)
+		(output)
+		(text "mens_r[0]" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "mens_r[0]" (rect 179 299 235 313)(font "Arial" (font_size 8)))
+		(line (pt 256 304)(pt 240 304)(line_width 1))
+	)
+	(port
+		(pt 256 320)
+		(output)
+		(text "ENVIAR_MENS" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "ENVIAR_MENS" (rect 151 315 235 329)(font "Arial" (font_size 8)))
+		(line (pt 256 320)(pt 240 320)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 336)(line_width 1))
+	)
+)

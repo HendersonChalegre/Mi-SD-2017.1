@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MEF">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|gerador_freq:inst1|lpm_counter0:inst11|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00019" CBX_FILE_NAME="cmpr_4vf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|gerador_freq:inst1|lpm_counter0:inst11|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00017" CBX_FILE_NAME="lpm_constant_cd4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|gerador_freq:inst1|lpm_counter1:inst6|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00019" CBX_FILE_NAME="cmpr_4vf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|gerador_freq:inst1|lpm_counter1:inst6|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00017" CBX_FILE_NAME="lpm_constant_qe4.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

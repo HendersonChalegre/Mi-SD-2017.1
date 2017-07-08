@@ -1,0 +1,121 @@
+Flow report for AtividadeULA
+Fri Oct 21 17:56:01 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Fri Oct 21 17:56:01 2016    ;
+; Quartus II Version      ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name           ; AtividadeULA                             ;
+; Top-level Entity Name   ; PRINCIPAL                                ;
+; Family                  ; ACEX1K                                   ;
+; Device                  ; EP1K100QC208-3                           ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; Yes                                      ;
+; Total logic elements    ; 93 / 4,992 ( 2 % )                       ;
+; Total pins              ; 22 / 147 ( 15 % )                        ;
+; Total memory bits       ; 0 / 49,152 ( 0 % )                       ;
+; Total PLLs              ; 0                                        ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/21/2016 17:55:25 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; AtividadeULA        ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                ;
++------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                       ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 105425941265.147708332504690                                ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT             ; Vhdl                                                        ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                ; ModelSim-Altera (VHDL)                                      ; <None>        ; --          ; --             ;
+; FLEX10K_OPTIMIZATION_TECHNIQUE     ; Speed                                                       ; Area          ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                           ; --            ; --          ; --             ;
+; MISC_FILE                          ; /home/aluno/Área de trabalho/AtividadeULA/AtividadeULA.dpf ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                   ; PRINCIPAL                                                   ; AtividadeULA  ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                         ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; --                  ; 00:00:03                           ;
+; Fitter                  ; 00:00:11     ; 1.0                     ; --                  ; 00:00:11                           ;
+; Assembler               ; 00:00:11     ; 1.0                     ; --                  ; 00:00:10                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; --                  ; 00:00:01                           ;
+; EDA Netlist Writer      ; 00:00:00     ; 1.0                     ; --                  ; 00:00:00                           ;
+; Total                   ; 00:00:25     ; --                      ; --                  ; 00:00:25                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++-------------------------+------------------+------------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
++-------------------------+------------------+------------------+------------+----------------+
+; Analysis & Synthesis    ; LabHard-25144    ; Debian GNU/Linux ; 7          ; i686           ;
+; Fitter                  ; LabHard-25144    ; Debian GNU/Linux ; 7          ; i686           ;
+; Assembler               ; LabHard-25144    ; Debian GNU/Linux ; 7          ; i686           ;
+; Classic Timing Analyzer ; LabHard-25144    ; Debian GNU/Linux ; 7          ; i686           ;
+; EDA Netlist Writer      ; LabHard-25144    ; Debian GNU/Linux ; 7          ; i686           ;
++-------------------------+------------------+------------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off AtividadeULA -c AtividadeULA
+quartus_fit --read_settings_files=off --write_settings_files=off AtividadeULA -c AtividadeULA
+quartus_asm --read_settings_files=off --write_settings_files=off AtividadeULA -c AtividadeULA
+quartus_tan --read_settings_files=off --write_settings_files=off AtividadeULA -c AtividadeULA
+quartus_eda --read_settings_files=off --write_settings_files=off AtividadeULA -c AtividadeULA
+
+
+
